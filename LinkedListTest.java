@@ -32,7 +32,7 @@ class LinkedListTest {
 	}
 
 	@Test
-	public void checkAppending3NodesToLinkedListTest2() {
+	public void checkAppending3NodesToLinkedListTest3() {
 		INode<Integer> myFirstNode = new MyNode<>(56);
 		INode<Integer> mySecondNode = new MyNode<>(30);
 		INode<Integer> myThirdNode = new MyNode<>(70);
@@ -45,7 +45,7 @@ class LinkedListTest {
 	}
 
 	@Test
-	public void checkInserting3NodesToLinkedListTest3() {
+	public void checkInserting3NodesToLinkedListTest4() {
 		INode<Integer> myFirstNode = new MyNode<>(56);
 		INode<Integer> mySecondNode = new MyNode<>(30);
 		INode<Integer> myThirdNode = new MyNode<>(70);
@@ -58,7 +58,7 @@ class LinkedListTest {
 	}
 
 	@Test
-	public void checkDeletingNodeFromLinkedListTest4() {
+	public void checkDeletingNodeFromLinkedListTest5() {
 		INode<Integer> myFirstNode = new MyNode<>(56);
 		INode<Integer> mySecondNode = new MyNode<>(30);
 		INode<Integer> myThirdNode = new MyNode<>(70);
@@ -69,9 +69,9 @@ class LinkedListTest {
 		boolean test = myFirstNode.equals(llp.pop());
 		assertTrue(test);
 	}
-	
+
 	@Test
-	public void checkDeletingLastNodeFromLinkedListTest5() {
+	public void checkDeletingLastNodeFromLinkedListTest6() {
 		INode<Integer> myFirstNode = new MyNode<>(56);
 		INode<Integer> mySecondNode = new MyNode<>(30);
 		INode<Integer> myThirdNode = new MyNode<>(70);
@@ -80,6 +80,19 @@ class LinkedListTest {
 		llp.append(myThirdNode);
 		llp.insert(mySecondNode, myFirstNode);
 		boolean test = myThirdNode.equals(llp.popLast());
+		assertTrue(test);
+	}
+
+	@Test
+	public void searchByValueFromLinkedListTest7() {
+		INode<Integer> myFirstNode = new MyNode<>(56);
+		INode<Integer> mySecondNode = new MyNode<>(30);
+		INode<Integer> myThirdNode = new MyNode<>(70);
+		LinkedListPractice llp = new LinkedListPractice();
+		llp.append(myFirstNode);
+		llp.append(mySecondNode);
+		llp.append(myThirdNode);
+		boolean test = llp.searchByValue(30);
 		assertTrue(test);
 	}
 }

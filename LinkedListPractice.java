@@ -48,7 +48,7 @@ public class LinkedListPractice {
 		return deletedNode;
 	}
 
-	// deleting last node
+//Deleting last node
 	public INode<Integer> popLast() {
 		INode<Integer> deletedNode = tail;
 		INode<Integer> temp = head;
@@ -57,5 +57,18 @@ public class LinkedListPractice {
 		}
 		tail = temp;
 		return deletedNode;
+	}
+
+//Searching node with value
+	public boolean searchByValue(int val) {
+		if (head == null)
+			return false;
+		INode<Integer> temp = head;
+		while (temp != null) {
+			if (temp.getData() == val)
+				return true;
+			temp.setNext(temp.getNext());
+		}
+		return false;
 	}
 }
