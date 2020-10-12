@@ -19,4 +19,15 @@ public class LinkedListPractice {
 			head = myNode;
 		}
 	}
+
+//Appending node at end
+	public void append(INode<Integer> myNode) {
+		if (tail != null) {
+			tail.setNext(myNode);
+			tail = myNode;
+		} else if (tail == null) {
+			tail = myNode;
+			head = myNode;
+		}
+	}
 }
