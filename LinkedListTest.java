@@ -43,4 +43,17 @@ class LinkedListTest {
 		boolean test = myFirstNode.getNext().equals(mySecondNode) && mySecondNode.getNext().equals(myThirdNode);
 		assertTrue(test);
 	}
+
+	@Test
+	public void checkInserting3NodesToLinkedListTest3() {
+		INode<Integer> myFirstNode = new MyNode<>(56);
+		INode<Integer> mySecondNode = new MyNode<>(30);
+		INode<Integer> myThirdNode = new MyNode<>(70);
+		LinkedListPractice llp = new LinkedListPractice();
+		llp.append(myFirstNode);
+		llp.append(myThirdNode);
+		llp.insert(mySecondNode, myFirstNode);
+		boolean test = myFirstNode.getNext().equals(mySecondNode) && mySecondNode.getNext().equals(myThirdNode);
+		assertTrue(test);
+	}
 }

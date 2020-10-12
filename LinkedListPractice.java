@@ -30,4 +30,12 @@ public class LinkedListPractice {
 			head = myNode;
 		}
 	}
+
+//Insert node in middle
+	public void insert(INode<Integer> myNode, INode<Integer> prevNode) {
+		if (prevNode == null)
+			add(myNode);
+		myNode.setNext(prevNode.getNext());
+		prevNode.setNext(myNode);
+	}
 }
