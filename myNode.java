@@ -1,19 +1,20 @@
 package linkedlist;
 
-public class myNode<T> {
-	private T data;
-	private myNode<T> next;
+public class MyNode<T> implements INode<T> {
 
-	public myNode(T data) {
+	private T data;
+	private INode<T> next;
+
+	public MyNode(T data) {
 		this.data = data;
 		next = null;
 	}
 
-	public myNode<T> getNext() {
+	public INode<T> getNext() {
 		return next;
 	}
 	
-	public void setNext(myNode<T> myNode) {
+	public void setNext(INode<T> myNode) {
 		this.next = myNode;
 	}
 	
