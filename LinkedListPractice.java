@@ -47,4 +47,15 @@ public class LinkedListPractice {
 		head.setNext(head.getNext());
 		return deletedNode;
 	}
+
+	// deleting last node
+	public INode<Integer> popLast() {
+		INode<Integer> deletedNode = tail;
+		INode<Integer> temp = head;
+		while (temp.getNext() != tail) {
+			temp.setNext(temp.getNext());
+		}
+		tail = temp;
+		return deletedNode;
+	}
 }
