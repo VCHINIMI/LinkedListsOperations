@@ -38,4 +38,13 @@ public class LinkedListPractice {
 		myNode.setNext(prevNode.getNext());
 		prevNode.setNext(myNode);
 	}
+
+//Delete the element
+	public INode<Integer> pop() {
+		if (head == null)
+			return head;
+		INode<Integer> deletedNode = head;
+		head.setNext(head.getNext());
+		return deletedNode;
+	}
 }
