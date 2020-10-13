@@ -110,4 +110,19 @@ class LinkedListTest {
 		boolean test = mySecondNode.getNext().equals(nodeToInsert) && nodeToInsert.getNext().equals(myThirdNode);
 		assertTrue(test);
 	}
+
+	@Test
+	public void checkShowSizeByDeletingNodeInLinkedListTest9() {
+		INode<Integer> myFirstNode = new MyNode<>(70);
+		INode<Integer> mySecondNode = new MyNode<>(30);
+		INode<Integer> myThirdNode = new MyNode<>(56);
+		INode<Integer> nodeToInsert = new MyNode<Integer>(40);
+		LinkedListPractice llp = new LinkedListPractice();
+		llp.add(myFirstNode);
+		llp.add(mySecondNode);
+		llp.add(myThirdNode);
+		llp.insert(nodeToInsert, mySecondNode);
+		boolean test = (3 == llp.showSizeByDeleting(40));
+		assertTrue(test);
+	}
 }
