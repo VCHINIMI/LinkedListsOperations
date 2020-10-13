@@ -8,6 +8,14 @@ public class LinkedListPractice {
 		tail = head;
 	}
 
+	public INode<Integer> getHead() {
+		return head;
+	}
+
+	public INode<Integer> getTail() {
+		return tail;
+	}
+
 //Add node 
 	public void add(INode<Integer> myNode) {
 		if (tail == null)
@@ -95,5 +103,22 @@ public class LinkedListPractice {
 			temp = temp.getNext();
 		}
 		return size;
+	}
+
+//Sorting while adding
+	public INode<Integer> sortedAdd(INode<Integer> myNode) {
+		if (head == null) {
+			head = myNode;
+			tail = head;
+			return head;
+		}
+		myNode.setNext(head);
+		if (head.getData() < myNode.getData()) {
+			int temp = head.getData();
+			head.setData(myNode.getData());
+			myNode.setData(temp);
+		}
+		head = myNode;
+		return head;
 	}
 }

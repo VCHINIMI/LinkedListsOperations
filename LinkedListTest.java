@@ -125,4 +125,20 @@ class LinkedListTest {
 		boolean test = (3 == llp.showSizeByDeleting(40));
 		assertTrue(test);
 	}
+
+	@Test
+	public void sortedNodeAddLinkedListTest10() {
+		INode<Integer> myFirstNode = new MyNode<>(70);
+		INode<Integer> mySecondNode = new MyNode<>(30);
+		INode<Integer> myThirdNode = new MyNode<>(56);
+		INode<Integer> myFourthNode = new MyNode<Integer>(40);
+		LinkedListPractice sll = new LinkedListPractice();
+		INode<Integer> head = sll.sortedAdd(myFirstNode);
+		head = sll.sortedAdd(mySecondNode);
+		head = sll.sortedAdd(myThirdNode);
+		head = sll.sortedAdd(myFourthNode);
+		boolean test = (30 == head.getData() && 40 == head.getNext().getData()
+				&& 56 == head.getNext().getNext().getData() && sll.getTail().getData() == 70);
+		assertTrue(test);
+	}
 }

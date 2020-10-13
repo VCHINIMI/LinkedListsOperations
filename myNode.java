@@ -21,4 +21,8 @@ public class MyNode<T> implements INode<T> {
 	public T getData() {
 		return data;
 	}
+	
+	public void setData(T d) {
+		data = d;
+	}
 }
