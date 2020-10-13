@@ -133,14 +133,21 @@ public class LinkedListPractice {
 		return top.getData();
 	}
 
-//Pop operation on stack
+//POP operation on stack
 	public INode<Integer> popStack() {
 		head = head.getNext();
 		return head;
 	}
 
-// Enqueue operation in queue
+//ENQUEUE operation in queue
 	public void enqueue(INode<Integer> myNode) {
 		append(myNode);
+	}
+
+//DEQUEUE Operation in queue
+	public INode<Integer> dequeue() {
+		INode temp = head;
+		head = head.getNext();
+		return temp;
 	}
 }
