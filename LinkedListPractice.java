@@ -121,4 +121,10 @@ public class LinkedListPractice {
 		head = myNode;
 		return head;
 	}
+
+//Linked List as Stack
+	public INode<Integer> push(INode<Integer> myNode) {
+		add(myNode);
+		return head;
+	}
 }
