@@ -122,9 +122,20 @@ public class LinkedListPractice {
 		return head;
 	}
 
-//Linked List as Stack
+//Linked List as Stack- PUSH Operation
 	public INode<Integer> push(INode<Integer> myNode) {
 		add(myNode);
+		return head;
+	}
+
+//PEEK operation
+	public int peek(INode<Integer> top) {
+		return top.getData();
+	}
+
+//Pop operation on stack
+	public INode<Integer> popStack() {
+		head = head.getNext();
 		return head;
 	}
 }
